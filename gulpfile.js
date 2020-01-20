@@ -21,7 +21,8 @@ function cleanup() {
 
 const buildJsSrc = ['src/**/*.js'];
 function buildJs() {
-	return gulp.src(buildJsSrc, { since: gulp.lastRun(buildJs) })
+	// return gulp.src(buildJsSrc, { since: gulp.lastRun(buildJs) })
+	return gulp.src(buildJsSrc)
 		.pipe(eslint())
 		.pipe(eslint.format())
 		.pipe(concat('eventful.js'))
